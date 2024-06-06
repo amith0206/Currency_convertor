@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyCurrencyConverter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    window.onscroll = function() { updateProgressBar() };
+  
+    function updateProgressBar() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+  <style>
+        *{
+              margin: 0;
+              padding: 0;
+        }
+body{
+    background-color:white;
+}
+.container-fluid{
+    background-color: #ab63e2;
+    scroll-padding-bottom: 0;
+}
+.progress-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.progress-bar {
+    width: 0;
+    height: 4px;
+    background-color: black;
+}
+
+
+
+nav {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 20px;
+            background-color: rgb(224, 209, 245);
+            padding: 23px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: rgb(2, 3, 18);
+            transition: all;
+            transition-duration: 500ms;
+        }
+
+        nav li a:hover {
+            text-decoration: none;
+            color: rgb(103, 101, 235);
+        }
+
+       
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+@media (max-width: 600px) {
+            
+
+            nav {
+                flex-direction: column;
+                font-size: 14px;
+            }
+
+            nav ul li {
+                margin: 5px 13px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .container {
+                max-width: 95vw;
+            }
+          }
+          .cards {
+    width: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 18rem;
+    height: 18rem;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 2px 4px black;
+}
+
+.card:nth-child(even) {
+    margin-left: 19rem; 
+}
+
+.card:nth-child(odd) {
+    margin-right: 19rem; 
+}
+.first-line{
+  font-size: 2rem;
+}
+.card-body, .card-text, .card-title {
+    background-color: #e0d1f5;
+    color: black;
+}
+
+  </style>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+  <nav>
+    <div class="logo">MyCurrencyConverter</div>
+    <ul>
+        <li><a href="http://127.0.0.1:5000">Home</a></li>
+        <li><a href="http://127.0.0.1:5000/algorithm">Algorithm</a></li>
+        <li><a href="http://127.0.0.1:5000/product">Product</a></li>
+    </ul>
+</nav>
+  
+<p class="first-line">
+  A currency converter is a tool that calculates the equivalent value of one currency in another, aiding in international transactions and financial decision-making.
+</p>
+<div class="cards">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">CurrencyConverter</h5>
+        <p class="card-text">
+          A currency converter is a tool or application that allows you to easily convert the value of one currency into another. It's especially useful when you're dealing with international transactions or traveling to a country with a different currency. Its applications are:
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">E-Commerce and Online Shopping</h5>
+        <p class="card-text">In the world of online shopping, people often purchase products from international websites. Currency converters allow shoppers to understand the cost of items in their own currency, making it easier to compare prices and make informed purchase decisions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Financial Planning</h5>
+        <p class="card-text">
+          Currency converters are essential for individuals and businesses engaged in international financial activities, such as investing in foreign stocks, bonds, or other assets. They provide the means to calculate potential returns and manage risks associated with currency fluctuations.
+        </p>
+      </div>
+    </div>
+  <div class="card">
+     <div class="card-body">
+      <h5 class="card-title">Cross-Border Transactions:</h5>
+      <p class="card-text"> Businesses and individuals involved in cross-border transactions, such as buying products or services from international suppliers or clients, use currency converters to ensure fair pricing and payment.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+     <h5 class="card-title">Remittances</h5>
+     <p class="card-text">
+      People working abroad often send money back to their families in their home country. Currency converters help them calculate how much money they need to send to ensure a specific amount is received in the local currency.  
+    </p>
+   </div>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+</head>
+<body>
+  <script>
+    window.onscroll = function() { updateProgressBar() };
+  
+    function updateProgressBar() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+  <style>
+    *{
+          margin: 0;
+          padding: 0;
+    }
+body{
+background-color:white;
+}
+.container-fluid{
+background-color: #ab63e2;
+scroll-padding-bottom: 0;
+}
+.progress-container {
+width: 100%;
+position: fixed;
+top: 0;
+z-index: 1000;
+}
+
+.progress-bar {
+width: 0;
+height: 4px;
+background-color: black;
+}
+
+
+
+nav {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 900;
+        display: flex;
+        font-size: 20px;
+        background-color: rgb(224, 209, 245);
+        padding: 23px;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: rgb(2, 3, 18);
+        transition: all;
+        transition-duration: 500ms;
+    }
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+@media (max-width: 600px) {
+        
+
+        nav {
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+        nav ul li {
+            margin: 5px 13px;
+        }
+
+        nav ul {
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 95vw;
+        }
+      }
+.cards {
+width: max-content;
+margin: auto;
+display: flex;
+flex-direction: column;
+}
+
+.card {
+width: 18rem;
+height: 18rem;
+margin: 10px;
+border: 1px solid black;
+box-shadow: 0px 2px 4px black;
+}
+
+.card:nth-child(even) {
+margin-left: 19rem; /* Push even cards to the right */
+}
+
+.card:nth-child(odd) {
+margin-right: 19rem; /* Push odd cards to the left */
+}
+.first-line{
+font-size: 2rem;
+}
+.card,.card-body, .card-text, .card-title {
+background-color: #e0d1f5;
+color: black;
+}
+
+</style>
+  
+  <nav>
+      <div class="logo">MyCurrencyConverter</div>
+      <ul>
+          <li><a href="http://127.0.0.1:5000">Home</a></li>
+          <li><a href="http://127.0.0.1:5000/algorithm">Algorithm</a></li>
+          <li><a href="http://127.0.0.1:5000/product">Product</a></li>
+      </ul>
+  </nav>
+  <p class="Heading">Algorithm</p>
+  <h3 align="left">Technology Stack:</h3>
+  <p align="left"> 
+    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://cdn-icons-png.flaticon.com/128/143/143655.png" alt="html5" width="40" height="40"/> </a>
+    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="html5" width="40" height="40"/> </a>
+    <a href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> <img src="https://cdn-icons-png.flaticon.com/128/1199/1199124.png" alt="JavaScript" width="40" height="40"/> </a> 
+    <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="python" width="40" height="40"/> </a> 
+    <a href="https://flask.palletsprojects.com/en/2.3.x/" target="_blank" rel="noreferrer"> <img src="https://cms-assets.tutsplus.com/uploads/users/769/posts/15965/preview_image/flask.png" alt="flask" width="40" height="40"/> </a>
+    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
+  </p>  
+  <h3 align="left">Control Flow</h3>
+  <div class="cards">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">User Interaction</h5>
+        <p class="card-text">
+          When the user enters a quantity and selects a currency, the program captures the input values and prevents the form from submitting. This ensures that the data is processed on the client side, providing a seamless experience. It also allows for instant feedback and interactivity, making the process of currency conversion smooth and efficient. This interaction is crucial for ensuring that users get the real-time exchange rates and can make informed financial decisions.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">API Request</h5>
+        <p class="card-text">
+          The program constructs an API URL using the selected currency as the base currency and an API key. It then makes a 'fetch' request to the API to get currency exchange rates. This API request is essential for obtaining up-to-date exchange rates, which are crucial for accurate currency conversion. By using a reliable API, the program ensures that users receive the most current exchange rates, reflecting real-world financial conditions and enabling precise conversions.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Data Population</h5>
+        <p class="card-text">
+          The program extracts the exchange rates from the API response. It calculates the converted values by multiplying the entered quantity with the exchange rates for different currencies. This step is fundamental in providing users with accurate conversion results. By leveraging the latest data from the API, the program ensures that users get reliable and precise conversion information, which is vital for making informed financial decisions, whether for travel, shopping, or investment purposes.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Output Display</h5>
+        <p class="card-text">
+          The program sets the display of the output section to 'block', revealing the converted values table. This visual representation of the data allows users to easily understand the conversion results. By displaying the converted values in a clear and organized manner, the program enhances user experience and facilitates easy comparison of different currency values. This step is crucial for ensuring that users can quickly and easily access the information they need for their financial decisions.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Table Update</h5>
+        <p class="card-text">
+          The program generates HTML table rows for each currency with their respective codes and calculated converted values. These rows are then added to the table in the output section. This dynamic update of the table ensures that users always have the latest conversion data at their fingertips. By automating this process, the program provides a seamless and efficient user experience, allowing for quick updates and real-time data display, which is essential for accurate financial planning and decision-making.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">User Experience</h5>
+        <p class="card-text">
+          After the converted values are populated and displayed, the user can view the conversion results in a table format on the webpage. This structured presentation of information helps users to easily compare different currency values and make informed decisions. The focus on user experience ensures that the process of currency conversion is not only accurate but also intuitive and user-friendly, making it accessible to users of all backgrounds and expertise levels.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Styling</h5>
+        <p class="card-text">
+          The provided CSS styles are applied to elements to create a visually appealing and responsive design for the currency converter webpage. Good styling enhances the user experience by making the interface easy to navigate and pleasing to the eye. Responsive design ensures that the webpage works well on all devices, providing a consistent user experience across different screen sizes. By focusing on aesthetics and usability, the program ensures that users have a positive experience, encouraging them to use the currency converter for all their financial needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
