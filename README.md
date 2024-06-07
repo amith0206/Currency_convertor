@@ -40,7 +40,6 @@ MyCurrencyConverter is a currency conversion tool built using Flask, HTML, CSS, 
     python app.py
     ```
 
-4. Open your web browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
 ## Usage
 
