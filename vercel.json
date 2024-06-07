@@ -11,6 +11,12 @@
         "src": "/(.*)",
         "dest": "app.py"
       }
+    ],
+    "rewrites": [
+      { "source": "/home", "destination": "/home.html" },
+      { "source": "/algorithm", "destination": "/algorithm.html" },
+      { "source": "/product", "destination": "/product.html" }
     ]
   }
+  
   
